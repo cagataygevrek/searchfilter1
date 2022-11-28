@@ -5,16 +5,12 @@ import { Users } from "./users";
 
 function App() {
   const [query, setQuery] = useState("");
-
   const keys = ["first_name", "last_name", "email"];
-
-  console.log(Users[0]);
   const search = (data) => {
     return data.filter((item) =>
       keys.some((key) => item[key].toLowerCase().includes(query))
     );
   };
-
   return (
     <div className="app">
       <input
